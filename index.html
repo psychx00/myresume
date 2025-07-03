@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Afrina</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      display: flex;
+      min-height: 100vh;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      width: 280px;
+      background-color: #1f1f1f;
+      padding: 30px 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .sidebar img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid white;
+  background-color: #ffffff;
+    }
+
+
+    .sidebar h1 {
+      font-size: 20px;
+      margin-top: 15px;
+      color: #ffffff;
+    }
+
+    .sidebar p {
+      font-size: 14px;
+      color: #bbbbbb;
+      margin: 4px 0;
+    }
+
+    .sidebar .contact,
+    .sidebar .skills {
+      text-align: left;
+      font-size: 14px;
+      margin-top: 25px;
+    }
+
+    .sidebar h3 {
+      color: #4facfe;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .main {
+      flex-grow: 1;
+      background-color: #181818;
+      padding: 20px;
+    }
+
+    
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    .tabs label {
+      padding: 10px 15px;
+      cursor: pointer;
+      background: #1f1f1f;
+      color: #ccc;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .tabs label:hover {
+      background: #2a2a2a;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    section.tab-content {
+      display: none;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    input#tab-about:checked ~ .content #about,
+    input#tab-education:checked ~ .content #education,
+    input#tab-experience:checked ~ .content #experience {
+      display: block;
+    }
+
+    h2 {
+      color: #4facfe;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .main {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left Sidebar -->
+  <div class="sidebar">
+    <img src="pics.jpg" alt="Profile Picture" />
+    <h1>NUR AFRINA BINTI MOHD KHAIRI</h1>
+    <p>Student | Tech Enthusiast</p>
+
+    <div class="contact">
+      <h3>Contact</h3>
+      <p><strong>Email:</strong> arinwoody@gmail.com</p>
+      <p><strong>Phone:</strong> 010-831 9878</p>
+      <p><strong>Instagram:</strong> nyx.sp</p>
+      <p><strong>TikTok:</strong> art3mizx0</p>
+    </div>
+
+    <div class="skills">
+      <h3>Skills</h3>
+      <p><strong>Technical:</strong><br>
+        HTML & CSS, Microsoft Word, PowerPoint, Canva, CapCut, Google Docs & Slides</p>
+
+      <p><strong>Soft Skills:</strong><br>
+        Teamwork, Event Planning, Time Management, Public Speaking, Team Management</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Tab Buttons -->
+    <input type="radio" name="tab" id="tab-about" checked>
+    <input type="radio" name="tab" id="tab-education">
+    <input type="radio" name="tab" id="tab-experience">
+
+    <div class="tabs">
+      <label for="tab-about">About Me</label>
+      <label for="tab-education">Education</label>
+      <label for="tab-experience">Experience</label>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="content">
+      <section id="about" class="tab-content">
+        <h2>About Me</h2>
+        <p>Hello! I'm Nur Afrina, a passionate student in Universiti Teknologi Mara (UiTM) majoring in Information Science.
+            <br>I enjoy learning new technologies and constantly strive to improve my craft.<br>
+        I'm dedicated to improving my skills and gaining more experience, because I believe every piece of information is valuable and important.</p>
+      </section>
+
+      <section id="education" class="tab-content">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>High School</strong><br>SM Sains Kota Tinggi, Johor (2018–2020) | SMK Bukit Batu (2021–2022) SPM: 4A 1B</li>
+          <li><strong>Foundation</strong><br>UiTM Dengkil (2023–2024) Foundation in TESL — CGPA: 3.33</li>
+          <li><strong>Degree</strong><br>UiTM Rembau (2024–Present) Bachelor of Information Science (Hons) Library Management</li>
+        </ul>
+      </section>
+
+      <section id="experience" class="tab-content">
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>Participant:</strong> National Chemistry Quiz – SMK Bukit Batu (2022)</li>
+          <li><strong>Netball Competition (District Level):</strong> 3rd Place – SMK Bukit Batu (2021)</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>
